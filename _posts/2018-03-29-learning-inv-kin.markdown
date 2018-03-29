@@ -9,7 +9,7 @@ categories: jekyll update
 ## The network's architecture
 
 ![ff net]({{ "/assets/ff_net.svg" | absolute_url }} "Feed Forward Network")\\
-*Fig. 1: The network's architecture to learn inverse kinematics.*
+*Fig. 1: The network's architecture for learning inverse kinematics.*
 
 A simple fully connected network with one hidden layer and 128 units is used to produce joint coordinates $\mathbf{y}$ in joint space, given the tool center point's position $\mathbf{x}$ in cartesian space.
 
