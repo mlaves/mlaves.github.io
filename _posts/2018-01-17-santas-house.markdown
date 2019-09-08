@@ -50,6 +50,7 @@ s = list(filter(is_solution, possible_solutions))
 print(s)
 ```
 
+Try it [here](https://repl.it/repls/ImperturbableDisfiguredMonads)!
 This reveals 44 possible solutions when starting at node `1`:
 
 ```
