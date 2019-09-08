@@ -1,0 +1,93 @@
+I",<p>The “House of Santa Clause” is a famous german drawing game and riddle. My grandfather introduced it to me when I was a little child. Its task is to draw a “house” with exactly 8 lines without lifting the pen or drawing a line twice. The drawing is accompanied by the simultaneously spoken rhyme of 8 syllables: “This is the house of San-ta Claus”, or in the german original “Das ist das Haus vom Ni-ko-laus”.</p>
+
+<p><img src="http://localhost:4000/assets/HouseOfSantaClaus.gif" alt="Santa's House" /></p>
+
+<p><em>Fig. 1: A solution of <a href="https://de.wikipedia.org/wiki/Haus_vom_Nikolaus#/media/File:Blender3D_HouseOfStNiclas.gif">Santa’s House</a> by <a href="https://commons.wikimedia.org/wiki/User:SoylentGreen">SoylentGreen</a> <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></em></p>
+
+<h2 id="numerical-solution">Numerical Solution</h2>
+
+<p>Everyone in Germany knows at least one solution to this problem. The question arises: “How many solutions exist?”. Let’s help ourselfs with brute force of computers! We first define a function that checks if a path is a solution to the problem and we then use this function to filter a list of possible solutions. Let’s denote the blue spots in Fig. 2 as <em>nodes</em> and the lines between two nodes as <em>edges</em>. We quickly figure out, that a complete solution visits every edge once and every node twice, except for node 4. That is, every valid solution visits 9 nodes and we therefore write possible paths as a string of node numbers with length of 9, e.g. <code class="highlighter-rouge">'123153452'</code>.</p>
+
+<p><img src="http://localhost:4000/assets/house_of_santa_nodes.svg" alt="Nodes of Santa's House" height="200 px" /></p>
+
+<p><em>Fig. 2: The nodes of Santa’s house</em></p>
+
+<p>Next, we write an edge as consecutive numbers of nodes, e.g. <code class="highlighter-rouge">'15'</code> or <code class="highlighter-rouge">'51'</code>. With this, we create a list containting all 8 possible edges once and deal with the reverse variant later.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">edges</span> <span class="o">=</span> <span class="p">[</span><span class="s">'15'</span><span class="p">,</span> <span class="s">'53'</span><span class="p">,</span> <span class="s">'34'</span><span class="p">,</span> <span class="s">'45'</span><span class="p">,</span> <span class="s">'52'</span><span class="p">,</span> <span class="s">'21'</span><span class="p">,</span> <span class="s">'13'</span><span class="p">,</span> <span class="s">'32'</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>Our filter function, which simply looks if every edge is present in the possible solution (in either direction) and returns <code class="highlighter-rouge">True</code> if so or <code class="highlighter-rouge">False</code> if otherwise.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">is_solution</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="c1"># convert to string so we can iterate over the elements
+</span>    <span class="n">x</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    
+    <span class="c1"># check if all edges are visited
+</span>    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">edges</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">x</span> <span class="ow">or</span> <span class="n">e</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>  <span class="c1"># also check for reverse direction
+</span>            <span class="k">continue</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+    
+    <span class="k">return</span> <span class="bp">True</span>
+</code></pre></div></div>
+
+<p>In the last step, we create a list of acending numbers from <code class="highlighter-rouge">111111111</code> to <code class="highlighter-rouge">155555555</code> (assuming that we start at node <code class="highlighter-rouge">1</code>) and filter this list for solutions:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">possible_solutions</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">111111111</span><span class="p">,</span> <span class="mi">155555555</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">is_solution</span><span class="p">,</span> <span class="n">possible_solutions</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>This reveals 44 possible solutions when starting at node <code class="highlighter-rouge">1</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>123153452, 123154352, 123451352, 123453152, 123513452, 123543152, 125134532,
+125135432, 125315432, 125345132, 125431532, 125435132, 132153452, 132154352,
+132534512, 132543512, 134512352, 134512532, 134521532, 134523512, 134532152,
+134532512, 135123452, 135125432, 135215432, 135234512, 135432152, 135432512,
+152134532, 152135432, 152345312, 152354312, 153123452, 153125432, 153213452,
+153254312, 153452132, 153452312, 154312352, 154312532, 154321352, 154325312,
+154352132, 154352312
+</code></pre></div></div>
+
+<p>We can imagine, that if we start at 2 and reverse all found paths, we have 88 solutions.
+But what if we do not restrict ourselfs to start at node <code class="highlighter-rouge">1</code> or <code class="highlighter-rouge">2</code>? Let’s try it out:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># CAUTION: this may take some time
+</span><span class="n">possible_solutions</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">111111111</span><span class="p">,</span><span class="mi">555555555</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">is_solution</span><span class="p">,</span> <span class="n">possible_solutions</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>The result will be (drumroll): 88! Or to put it another way: You <strong>have</strong> to start at node <code class="highlighter-rouge">1</code> or <code class="highlighter-rouge">2</code> to solve the problem. For the sake of completeness, all 88 results are given at the end of this post. But now, let’s tackle this problem in a more mathematical way.</p>
+
+<h2 id="euler-path">Euler Path</h2>
+
+<p>The problem of “House of Santa Claus” can be modeled with graph theory. A graph is a mathematical structure, which models pairwise relations between objects. The objects are called vertices or nodes which are connected by edges or lines. Santa’s house has 5 nodes and 8 edges. The graph is <em>undirected</em> as there is no given direction between two nodes connected by an edge. However, when trying to find solutions to Santa’s house, you quickly find out that you have to start at the lower left node and end at the lower right one (as shown above).</p>
+
+<p>More specifically, the problem of “House of Santa Claus” it is an <em>Eulerian path</em> problem where we want to find a path in a finite graph which visits every edge exactly once. When discussing the problem of the <a href="https://en.wikipedia.org/wiki/Seven_Bridges_of_Königsberg">Seven Bridges of Königsberg</a> in 1736, Euler found out that an Eulerian path exists for graphs with exactly zero or two nodes having an odd degree. The degree of a node is its number of edges. If a graph has zero nodes with odd degree, the starting node will be the ending node, and is therefore called <em>Eulerian cycle</em>. Euler himself did not provide any proof for this theorem and it was not until 1873 that Carl Hierholzer published a proof in the article <em>Ueber die Möglichkeit, einen Linienzug ohne Wiederholung und ohne Unterbrechung zu umfahren</em>. In: Mathematische Annalen (1873) 6: 30. doi:<a href="https://doi.org/10.1007/bf01442866">10.1007/bf01442866</a>.  Santa’s house has two nodes with degree of 3 (node 1 and 2) and the Eulerian path must start and end at them. There is no Eulerian cycle in Santa’s house.</p>
+
+<p><img src="http://localhost:4000/assets/Jolly-old-saint-nick.gif" alt="Santa Claus" /></p>
+
+<p><em>Fig. 3: Santa lives in this house (public domain by <a href="https://commons.wikimedia.org/wiki/File:Jolly-old-saint-nick.gif">Anrie</a>)</em></p>
+
+<p>However, when I started to think about this problem, I thought that graphy theory would provide me with some analytical solutions by e.g. solving some linear equations. To my limited knowledge, it seems that only <em>algorithmic</em> solutions exist, like the one above using brute force (trying out all possible ways). There are, at least, some more clever algorithms, like Fleury’s algorithm or one provided by Carl Hierholzer. Even counting the numbers of possible Euler paths is a problem known to be #P-complete, which is a term from computational complexity theory. To my understanding, this translates to <em>intractable</em> or <em>infeasible</em>. Very disappointing.</p>
+
+<h2 id="all-88-solutions">All 88 Solutions</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>253451321, 125435132, 234531251, 153452132, 213452351, 235431251, 125315432,
+253215431, 123451352, 154312532, 235134521, 123154352, 132153452, 132543512,
+231254351, 134521532, 254351321, 215325431, 152345312, 235125431, 135234512,
+135215432, 213253451, 235215431, 125135432, 123153452, 253123451, 253451231,
+231534521, 153254312, 215435231, 253213451, 253154321, 134532512, 254351231,
+134512352, 215345231, 132534512, 152134532, 213523451, 154352132, 231543521,
+234521531, 153125432, 213254351, 254312351, 254315321, 132154352, 235213451,
+123453152, 234512531, 235431521, 213453251, 135432152, 134532152, 153452312,
+153123452, 251235431, 134523512, 153213452, 254321351, 234521351, 213543251,
+154321352, 251234531, 135125432, 125134532, 152135432, 234531521, 231253451,
+234513521, 125345132, 254321531, 135432512, 123513452, 215235431, 135123452,
+154352312, 123543152, 215234531, 125431532, 154312352, 215432531, 251354321,
+251345321, 134512532, 152354312, 154325312
+</code></pre></div></div>
+:ET
