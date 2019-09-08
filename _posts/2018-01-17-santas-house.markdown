@@ -15,7 +15,7 @@ The "House of Santa Clause" is a famous german drawing game and riddle. My grand
 
 Everyone in Germany knows at least one solution to this problem. The question arises: "How many solutions exist?". Let's help ourselfs with brute force of computers! We first define a function that checks if a path is a solution to the problem and we then use this function to filter a list of possible solutions. Let's denote the blue spots in Fig. 2 as *nodes* and the lines between two nodes as *edges*. We quickly figure out, that a complete solution visits every edge once and every node twice, except for node 4. That is, every valid solution visits 9 nodes and we therefore write possible paths as a string of node numbers with length of 9, e.g. `'123153452'`.
 
-![Nodes of Santa's House]({{ "/assets/house_of_santa_nodes.svg" | absolute_url }}){:height="200 px"}
+<img src="{{"/assets/house_of_santa_nodes.svg" | absolute_url }}" width="150" height="150" alt="Nodes of Santa's House" />
 
 *Fig. 2: The nodes of Santa's house*
 
