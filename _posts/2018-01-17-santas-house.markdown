@@ -63,7 +63,7 @@ This reveals 44 possible solutions when starting at node `1`:
 154352132, 154352312
 ```
 
-We can imagine, that if we start at 2 and reverse all found paths, we have 88 solutions.
+By looking at the results, we see that all solutions end at `2`. We can imagine, that if we start at `2` and reverse all found paths, we have 88 solutions.
 But what if we do not restrict ourselfs to start at node `1` or `2`? Let's try it out:
 
 ```python
