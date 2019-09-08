@@ -46,8 +46,8 @@ In the last step, we create a list of acending numbers from `111111111` to `1555
 
 ```python
 possible_solutions = range(111111111, 155555555)
-s = list(filter(is_solution, possible_solutions))
-print(s)
+s = filter(is_solution, possible_solutions)
+print(list(s))
 ```
 
 Try it [here](https://repl.it/repls/ImperturbableDisfiguredMonads)!
