@@ -45,11 +45,13 @@ sidebar:
 career-profile:
     title: Career Profile
     summary: |
-      Todo.
+      Modern medicine has made incredible progress in the last 100 years. The development of technology to support medical personnel has contributed to this in particular. It is my wish to do research on data-driven medical technology of tomorrow and to support modern medicine with my contribution. I am a research assistant and fifth year PhD student at the Institute of Mechatronic Systems, Leibniz Universität Hannover, Germany and are currently interested in approximate Bayesian inference for uncertainty-aware medical image analysis. The working title of my PhD thesis is *Well-Calibrated Predictive Uncertainty in Medical Imaging with Deep Learning*, which I expect to finish by 12/2020.
+
+      After finishing my PhD thesis, I take on new challenges and start as a PostDoc at the [Institute of Medical Technology and Intelligent Systems](https://mtec.et8.tuhh.de) with Prof. Alexander Schlaefer.
 education:
     - degree: PhD in Engineering
       university: Leibniz Universität Hannover
-      time: 2015 &ndash; ongoing
+      time: 2015 &ndash; present
       details: |
         Text.
     - degree: MSc in Engineering
@@ -63,47 +65,62 @@ education:
       details: |
         Text.
 experiences:
-    - role: Lead Developer
-      time: 2015 - Present
-      company: Startup Hubs, San Francisco
+    - role: PostDoc
+      time: 2021 &ndash; present
+      company: Institute of Medical Technology and Intelligent Systems, Hamburg University of Technology
       details: |
-        Todo.
-          - Bullet point
-          - Bullet point
-    - role: Senior Software Engineer
-      time: 2014 - 2015
-      company: Google, London
+        Further details will be announced soon.
+    - role: Head of Research Group
+      time: 2019 &ndash; 2020
+      company: Institute of Mechatronic Systems, Leibniz Universität Hannover
       details: |
-        Todo.
-          - Bullet point
-          - Bullet point
-    - role: UI Developer
-      time: 2012 - 2014
-      company: Amazon, London
+        Medical Technology and Image Processing
+    - role: PhD Student
+      time: 2015 &ndash; present
+      company: Institute of Mechatronic Systems, Leibniz Universität Hannover
       details: |
-        Todo.
-          - Bullet point
-          - Bullet point
-projects:
-    title: Projects
-    intro: >
-      Todo.
-    assignments:
-      - title: Velocity
-        link: "#hook"
-        tagline: "A responsive website template designed to help startups promote, market and sell their products."
+          - Thesis working title *Well-Calibrated Predictive Uncertainty in Medical Imaging with Deep Learning*
+    - role: Master of Science
+      time: 2012 - 2015
+      company: Leibniz Universität Hannover
+      details: |
+        Mechanical engineering with focus on robotics and medical image processing
+          - Final grade 1.2 (with honours, GPA equiv. 3.8/4.0)
+          - Master’s thesis *Three-dimensional tracking of soft tissue deformations for incision planning in lasery surgery*
+    - role: Bachelor of Science
+      time: 2009 - 2012
+      company: Leibniz Universität Hannover
+      details: |
+        Mechanical engineering
+          - Bachelor’s thesis *Registration of an operating table using the kinect sensor system*
+#projects:
+#    title: Projects
+#    intro: >
+#      Todo.
+#    assignments:
+#      - title: Velocity
+#        link: "#hook"
+#        tagline: "A responsive website template designed to help startups promote, market and sell their products."
 
 publications:
     title: Publications
-    intro: |
-      You can list your publications in this section. Lorem ipsum dolor sit
-      amet, consectetur adipiscing elit. Vestibulum et ligula in nunc
-      bibendum fringilla a eu lectus.
+#    intro: A non-exhaustive list of recent publications
     papers:
-      - title: Todo
-        link: "#"
-        authors: Max-Heinrich Laves
-        conference: Todo.
+      - title: Well-Calibrated Regression Uncertainty in Medical Imaging with Deep Learning
+        link: "http://proceedings.mlr.press/v121/laves20a.html"
+        authors: Max-Heinrich Laves, Sontje Ihler, Jacob F. Fast, Lüder A. Kahrs, Tobias Ortmaier
+        conference: Medical Imaging with Deep Learning
+        year: 2020
+      - title: Well-Calibrated Model Uncertainty with Temperature Scaling for Dropout Variational Inference
+        link: "https://arxiv.org/abs/1909.13550"
+        authors: Max-Heinrich Laves, Sontje Ihler, Karl-Philipp Kortmann, Tobias Ortmaier
+        conference: 4th workshop on Bayesian Deep Learning (NeurIPS)
+        year: 2019
+      - title: A dataset of laryngeal endoscopic images with comparative study on convolution neural network based semantic segmentation
+        link: "https://link.springer.com/article/10.1007/s11548-018-01910-0"
+        authors: Max-Heinrich Laves, Jens Bicker, Lüder A. Kahrs, Tobias Ortmaier
+        conference: International Journal of Computer Assisted Radiology and Surgery
+        year: 2019
 
 skills:
     title: Skills &amp; Proficiency
