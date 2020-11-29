@@ -35,16 +35,16 @@ sidebar:
 
     interests:
       - item: Jogging
-        link:
+        link: 
 
       - item: Equestrianism
-        link:
+        link: "/assets/images/manni.jpg"
 
       - item: Homebrewing
-        link:
+        link: "/assets/images/homebrew.jpg"
 
 career-profile:
-    title: Career Profile
+    title: About me
     summary: |
       Modern medicine has made incredible progress in the last 100 years. The development of technology to support medical personnel has contributed to this in particular. It is my wish to do research on data-driven medical technology of tomorrow and to support modern medicine with my contribution. I am a research assistant and fifth year PhD student at the Institute of Mechatronic Systems, Leibniz Universität Hannover, Germany and are currently interested in approximate Bayesian inference for uncertainty-aware medical image analysis. The working title of my PhD thesis is *Well-Calibrated Predictive Uncertainty in Medical Imaging with Deep Learning*, which I expect to finish by 12/2020.
 
@@ -107,6 +107,16 @@ publications:
     title: Publications
 #    intro: A non-exhaustive list of recent publications
     papers:
+      - title: Uncertainty Estimation in Medical Image Denoising with Bayesian Deep Image Prior
+        link: "https://link.springer.com/chapter/10.1007/978-3-030-60365-6_9"
+        authors: Max-Heinrich Laves, Malte Tölle, Tobias Ortmaier
+        conference: UNSURE Workshop at MICCAI
+        year: 2020
+      - title: Self-Supervised Domain Adaptation for Patient-Specific, Real-Time Tissue Tracking
+        link: "https://link.springer.com/chapter/10.1007/978-3-030-59716-0_6"
+        authors: Sontje Ihler, Felix Kuhnke, Max-Heinrich Laves, Tobias Ortmaier
+        conference: MICCAI
+        year: 2020
       - title: Well-Calibrated Regression Uncertainty in Medical Imaging with Deep Learning
         link: "http://proceedings.mlr.press/v121/laves20a.html"
         authors: Max-Heinrich Laves, Sontje Ihler, Jacob F. Fast, Lüder A. Kahrs, Tobias Ortmaier
@@ -122,6 +132,21 @@ publications:
         authors: Max-Heinrich Laves, Jens Bicker, Lüder A. Kahrs, Tobias Ortmaier
         conference: International Journal of Computer Assisted Radiology and Surgery
         year: 2019
+      - title: Volumetric 3D stitching of optical coherence tomography volumes
+        link: "https://www.degruyter.com/view/journals/cdbme/4/1/article-p327.xml"
+        authors: Max-Heinrich Laves, Lüder A. Kahrs, Tobias Ortmaier
+        conference: Current Directions in Biomedical Engineering
+        year: 2018
+      - title: Feature tracking for automated volume of interest stabilization on 4D-OCT images
+        link: "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10135/101350W/Feature-tracking-for-automated-volume-of-interest-stabilization-on-4D/10.1117/12.2255090.short?SSO=1"
+        authors: Max-Heinrich Laves, Andreas Schoob, Lüder A Kahrs, Tom Pfeiffer, Robert Huber, Tobias Ortmaier
+        conference: SPIE Medical Imaging
+        year: 2017
+      - title: Soft tissue motion tracking with application to tablet-based incision planning in laser surgery
+        link: "https://link.springer.com/article/10.1007/s11548-016-1420-5"
+        authors: Andreas Schoob, Max-Heinrich Laves, Lüder Alexander Kahrs, Tobias Ortmaier
+        conference: International Journal of Computer Assisted Radiology and Surgery
+        year: 2016
 
 skills:
     title: Skills &amp; Proficiency
