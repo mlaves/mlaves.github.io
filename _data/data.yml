@@ -127,24 +127,24 @@ publications:
         authors: Max-Heinrich Laves, Sontje Ihler, Karl-Philipp Kortmann, Tobias Ortmaier
         conference: 4th workshop on Bayesian Deep Learning (NeurIPS)
         year: 2019
-      - title: A dataset of laryngeal endoscopic images with comparative study on convolution neural network based semantic segmentation
+      - title: A Dataset of Laryngeal Endoscopic Images With Comparative Study on Convolution Neural Network Based Semantic Segmentation
         link: "https://link.springer.com/article/10.1007/s11548-018-01910-0"
         authors: Max-Heinrich Laves, Jens Bicker, Lüder A. Kahrs, Tobias Ortmaier
         conference: International Journal of Computer Assisted Radiology and Surgery
         year: 2019
-      - title: Volumetric 3D stitching of optical coherence tomography volumes
+      - title: Volumetric 3D Stitching of Optical Coherence Tomography Volumes
         link: "https://www.degruyter.com/view/journals/cdbme/4/1/article-p327.xml"
         authors: Max-Heinrich Laves, Lüder A. Kahrs, Tobias Ortmaier
         conference: Current Directions in Biomedical Engineering
         year: 2018
-      - title: Feature tracking for automated volume of interest stabilization on 4D-OCT images
+      - title: Feature Tracking for Automated Volume of Interest Stabilization on 4D-OCT Images
         link: "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10135/101350W/Feature-tracking-for-automated-volume-of-interest-stabilization-on-4D/10.1117/12.2255090.short?SSO=1"
         authors: Max-Heinrich Laves, Andreas Schoob, Lüder A. Kahrs, Tom Pfeiffer, Robert Huber, Tobias Ortmaier
         conference: SPIE Medical Imaging
         year: 2017
-      - title: Soft tissue motion tracking with application to tablet-based incision planning in laser surgery
+      - title: Soft Tissue Motion Tracking With Application to Tablet-based Incision Planning in Laser Surgery
         link: "https://link.springer.com/article/10.1007/s11548-016-1420-5"
-        authors: Andreas Schoob, Max-Heinrich Laves, Lüder Alexander Kahrs, Tobias Ortmaier
+        authors: Andreas Schoob, Max-Heinrich Laves, Lüder A. Kahrs, Tobias Ortmaier
         conference: International Journal of Computer Assisted Radiology and Surgery
         year: 2016
 
