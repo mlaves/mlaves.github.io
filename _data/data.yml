@@ -115,10 +115,25 @@ publications:
     title: Publications
 #    intro: A non-exhaustive list of recent publications
     papers:
+      - title: Posterior temperature optimized Bayesian models for inverse problems in medical imaging
+        link: "https://www.sciencedirect.com/science/article/abs/pii/S1361841522000342"
+        authors: Max-Heinrich Laves, Malte Tölle, Alexander Schlaefer, Sandy Engelhardt
+        conference: Medical Image Analysis
+        year: 2022
+      - title: Robotic tissue sampling for safe post-mortem biopsy in infectious corpses
+        link: "https://ieeexplore.ieee.org/abstract/document/9693976/"
+        authors: Maximilian Neidhardt, Stefan Gerlach, Robin Mieling, Max-Heinrich Laves, ..., Benjamin Ondruschka, Alexander Schlaefer
+        conference: IEEE Transactions on Medical Robotics and Bionics
+        year: 2022
+      - title: Recalibration of Aleatoric and Epistemic Regression Uncertainty in Medical Imaging
+        link: "https://arxiv.org/abs/2104.12376"
+        authors: Max-Heinrich Laves, Sontje Ihler, Jacob F. Fast, Lüder A. Kahrs, Tobias Ortmaier
+        conference: Journal of Machine Learning for Biomedical Imaging
+        year: 2021
       - title: Uncertainty Estimation in Medical Image Denoising with Bayesian Deep Image Prior
         link: "https://link.springer.com/chapter/10.1007/978-3-030-60365-6_9"
         authors: Max-Heinrich Laves, Malte Tölle, Tobias Ortmaier
-        conference: UNSURE Workshop at MICCAI
+        conference: UNSURE Workshop at MICCAI (best paper award)
         year: 2020
       - title: Self-Supervised Domain Adaptation for Patient-Specific, Real-Time Tissue Tracking
         link: "https://link.springer.com/chapter/10.1007/978-3-030-59716-0_6"
