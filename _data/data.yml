@@ -22,6 +22,7 @@ sidebar:
     gitlab: #
     bitbucket: #
     twitter: '@MaxLaves'
+    mastodon: 'det.social/@MaxLaves'
     stack-overflow: # Number/Username, e.g. 123456/alandoe
     codewars: #
     goodreads: # Number-Username, e.g. 123456-alandoe
@@ -35,7 +36,7 @@ sidebar:
 
     interests:
       - item: Jogging
-        link: 
+        link:
 
       - item: Equestrianism
         link: "/assets/images/manni.jpg"
@@ -46,13 +47,15 @@ sidebar:
 career-profile:
     title: About me
     summary: |
-      Modern medicine has made incredible progress in the last 100 years. The development of technology to support medical personnel has contributed to this in particular. It is my wish to do research on data-driven medical technology of tomorrow and to support modern medicine with my contribution. I am a research assistant and fifth year PhD student at the Institute of Mechatronic Systems, Leibniz Universität Hannover, Germany and are currently interested in approximate Bayesian inference for uncertainty-aware medical image analysis. The working title of my PhD thesis is *Well-Calibrated Predictive Uncertainty in Medical Imaging with Deep Learning*, which I expect to finish by 12/2020.
+      Modern medicine has made incredible progress in the last 100 years. The development of technology to support medical personnel has contributed to this in particular. It is my wish to do research on data-driven medical technology of tomorrow and to support modern medicine with my contribution.
 
-      After finishing my PhD thesis, I take on new challenges and start as a PostDoc at the [Institute of Medical Technology and Intelligent Systems](https://mtec.et8.tuhh.de) with Prof. Alexander Schlaefer.
+      I am a research scientist at *Philips Research* in Hamburg working on machine learning algorithms for clinical applications in CT and MRI. Before that, I was a postdoctoral researcher at the *Institute of Medical Technology and Intelligent Systems* at Hamburg University of Technology and my main research interest was Bayesian inference for uncertainty-aware medical image analysis with deep learning.
+      During my PhD studies at *Leibniz University Hannover*, I have been working on calibration methods to obtain well-calibrated uncertainties from deep Bayesian models in medical imaging applications.
+      I have experience in working with many modalities, including X-ray, CT, MRI, ultrasound, OCT, and (stereo) endoscopy.
 education:
     - degree: PhD in Engineering
       university: Leibniz Universität Hannover
-      time: 2015 &ndash; present
+      time: 2015 &ndash; 2020
       details: |
         Text.
     - degree: MSc in Engineering
@@ -66,30 +69,35 @@ education:
       details: |
         Text.
 experiences:
+    - role: Research Scientist
+      time: 2022 &ndash; present
+      company: Philips Research Hamburg
+      details: |
+        AI in clinical applications.
     - role: PostDoc
-      time: 2021 &ndash; present
+      time: 2021 &ndash; 2022
       company: Institute of Medical Technology and Intelligent Systems, Hamburg University of Technology
       details: |
-        Further details will be announced soon.
-    - role: Head of Research Group
-      time: 2019 &ndash; 2020
+        Deep learning and robotics in medical imaging applications.
+    - role: Team Lead
+      time: 2019 &ndash; 2021
       company: Institute of Mechatronic Systems, Leibniz Universität Hannover
       details: |
         Medical Technology and Image Processing
     - role: PhD Student
-      time: 2015 &ndash; present
+      time: 2015 &ndash; 2020
       company: Institute of Mechatronic Systems, Leibniz Universität Hannover
       details: |
-          - Thesis working title *Well-Calibrated Predictive Uncertainty in Medical Imaging with Deep Learning*
+          - Thesis title *Well-Calibrated Predictive Uncertainty in Medical Imaging with Deep Learning*
     - role: Master of Science
-      time: 2012 - 2015
+      time: 2012 &ndash; 2015
       company: Leibniz Universität Hannover
       details: |
         Mechanical engineering with focus on robotics and medical image processing
           - Final grade 1.2 (with honours, GPA equiv. 3.8/4.0)
           - Master’s thesis *Three-dimensional tracking of soft tissue deformations for incision planning in lasery surgery*
     - role: Bachelor of Science
-      time: 2009 - 2012
+      time: 2009 &ndash; 2012
       company: Leibniz Universität Hannover
       details: |
         Mechanical engineering
@@ -157,6 +165,12 @@ skills:
 
       - name: PyTorch
         level: 98%
+
+      - name: C/C++
+        level: 75%
+
+      - name: Julia
+        level: 60%
 
       - name: TensorFlow
         level: 60%
