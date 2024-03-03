@@ -49,9 +49,10 @@ career-profile:
     summary: |
       Modern medicine has made incredible progress in the last 100 years. The development of technology to support medical personnel has contributed to this in particular. It is my wish to do research on data-driven medical technology of tomorrow and to support modern medicine with my contribution.
 
-      I am a research scientist at *Philips Research* in Hamburg working on machine learning algorithms for clinical applications in CT and MRI. Before that, I was a postdoctoral researcher at the *Institute of Medical Technology and Intelligent Systems* at Hamburg University of Technology and my main research interest was Bayesian inference for uncertainty-aware medical image analysis with deep learning.
+      I am a senior research scientist at *ImFusion GmbH* in Munich working on machine learning algorithms for medical imaging. Before that, I worked at *Philips Research* Hamburg on machine learning for clinical applications in CT and MRI. After my PhD, I was a postdoctoral researcher at the *Institute of Medical Technology and Intelligent Systems* at Hamburg University of Technology and my main research interest was Bayesian inference for uncertainty-aware medical image analysis with deep learning.
       During my PhD studies at *Leibniz University Hannover*, I have been working on calibration methods to obtain well-calibrated uncertainties from deep Bayesian models in medical imaging applications.
       I have experience in working with many modalities, including X-ray, CT, MRI, ultrasound, OCT, and (stereo) endoscopy.
+      In my sparse free time, I develop apps for macOS and iOS.
 education:
     - degree: PhD in Engineering
       university: Leibniz Universität Hannover
@@ -69,8 +70,13 @@ education:
       details: |
         Text.
 experiences:
+    - role: Senior Research Scientist
+      time: 2023 &ndash; present
+      company: ImFusion GmbH
+      details: |
+        Machine learning for medical imaging.
     - role: Research Scientist
-      time: 2022 &ndash; present
+      time: 2022 &ndash; 2023
       company: Philips Research Hamburg
       details: |
         AI in clinical applications.
@@ -182,6 +188,9 @@ skills:
         level: 98%
 
       - name: C/C++
+        level: 75%
+
+      - name: Swift
         level: 75%
 
       - name: Julia
